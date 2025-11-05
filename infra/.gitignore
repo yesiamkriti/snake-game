@@ -1,0 +1,14 @@
+# Ignore the .terraform directory where provider binaries and modules are downloaded
+.terraform/
+
+# Ignore local state files
+*.tfstate
+*.tfstate.*
+
+# Ignore variable files that might contain sensitive information
+*.tfvars
+*.tfvars.json
+
+# Ignore temporary files or backups
+*~
+#*
