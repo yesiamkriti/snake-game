@@ -7,7 +7,7 @@ pipeline {
         BACKEND_REPO   = 'backend-repo'
         FRONTEND_ECR   = "ACCOUNT_ID.dkr.ecr.${AWS_REGION}.amazonaws.com/${FRONTEND_REPO}"
         BACKEND_ECR    = "ACCOUNT_ID.dkr.ecr.${AWS_REGION}.amazonaws.com/${BACKEND_REPO}"
-        DEPLOY_SERVER  = "ec2-user@<APP_SERVER_PUBLIC_IP>"//ec2 app-server instance ip
+        DEPLOY_SERVER  = "ec2-user@51.20.123.14"//ec2 app-server instance ip
     }
 
     stages {
@@ -82,10 +82,10 @@ pipeline {
 
     post {
         success {
-            echo "✅ Deployment successful! Your app is live!"
+            echo "Deployment successful! Your app is live!"
         }
         failure {
-            echo "❌ Deployment failed. Check logs."
+            echo "Deployment failed. Check logs."
         }
     }
 }
